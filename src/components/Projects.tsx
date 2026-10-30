@@ -1,6 +1,7 @@
 import { projects } from '../data/projects'
 import type { Lang, Project } from '../data/types'
 import type { UI } from '../i18n/ui'
+import { getVisibleProjects } from '../lib/visibleProjects'
 import './Projects.css'
 
 /** Los borradores solo se muestran mientras desarrollas (npm run dev). */
@@ -12,9 +13,7 @@ interface ProjectsProps {
 }
 
 export function Projects({ lang, t }: ProjectsProps) {
-  const visible = projects.filter((project) => SHOW_DRAFTS || !project.draft)
-  const featured = visible.find((project) => project.featured)
-  const others = visible.filter((project) => project !== featured)
+  const { featured, others } = getVisibleProjects(projects, SHOW_DRAFTS)
 
   return (
     <section id="proyectos" className="container section" aria-labelledby="projects-title">
