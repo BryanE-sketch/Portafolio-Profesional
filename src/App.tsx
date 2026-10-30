@@ -1,11 +1,11 @@
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { useLang } from "./hooks/useLang";
-import { ui } from "./i18n/ui";
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
+import { useLang } from './hooks/useLang'
+import { ui } from './i18n/ui'
 
 export default function App() {
-  const { lang, toggleLang } = useLang();
-  const t = ui[lang];
+  const { lang, toggleLang } = useLang()
+  const t = ui[lang]
 
   return (
     <>
@@ -19,5 +19,5 @@ export default function App() {
         <Hero lang={lang} t={t} />
       </main>
     </>
-  );
+  )
 }
