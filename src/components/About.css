@@ -1,0 +1,18 @@
+.about {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 64ch;
+  font-size: 1.125rem;
+}
+
+/* El primer párrafo funciona como entradilla: más grande y en la fuente de títulos */
+.about p:first-child {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.about p + p {
+  color: var(--color-text-muted);
+}

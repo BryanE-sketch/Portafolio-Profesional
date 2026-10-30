@@ -1,16 +1,16 @@
-import { profile } from "../data/profile";
-import type { Lang } from "../data/types";
-import type { UI } from "../i18n/ui";
-import { RequestFlow } from "./RequestFlow";
-import "./Hero.css";
+import { profile } from '../data/profile'
+import type { Lang } from '../data/types'
+import type { UI } from '../i18n/ui'
+import { RequestFlow } from './RequestFlow'
+import './Hero.css'
 
 interface HeroProps {
-  lang: Lang;
-  t: UI;
+  lang: Lang
+  t: UI
 }
 
 export function Hero({ lang, t }: HeroProps) {
-  const { links } = profile;
+  const { links } = profile
 
   return (
     <section id="inicio" className="container hero">
@@ -28,12 +28,7 @@ export function Hero({ lang, t }: HeroProps) {
           {t.ctaProjects}
         </a>
         {links.github && (
-          <a
-            className="btn"
-            href={links.github}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="btn" href={links.github} target="_blank" rel="noreferrer">
             {t.ctaGithub}
           </a>
         )}
@@ -48,5 +43,5 @@ export function Hero({ lang, t }: HeroProps) {
 
       <RequestFlow t={t} />
     </section>
-  );
+  )
 }

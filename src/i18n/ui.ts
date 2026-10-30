@@ -20,7 +20,8 @@ export const ui = {
     stackTitle: 'Con qué trabajo',
     aboutTitle: 'Sobre mí',
     contactTitle: 'Hablemos',
-    contactLead: 'Si tu equipo busca un desarrollador junior con ganas de construir y aprender, escríbeme. Respondo en menos de 24 horas.',
+    contactLead:
+      'Si tu equipo busca un desarrollador junior con ganas de construir y aprender, escríbeme. Respondo en menos de 24 horas.',
     contactEmail: 'Escribir un correo',
     copy: 'Copiar correo',
     copied: 'Correo copiado',
@@ -44,7 +45,8 @@ export const ui = {
     stackTitle: 'What I work with',
     aboutTitle: 'About me',
     contactTitle: 'Let’s talk',
-    contactLead: 'If your team is looking for a junior developer eager to build and learn, write to me. I reply within 24 hours.',
+    contactLead:
+      'If your team is looking for a junior developer eager to build and learn, write to me. I reply within 24 hours.',
     contactEmail: 'Send an email',
     copy: 'Copy email',
     copied: 'Email copied',

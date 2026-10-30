@@ -69,3 +69,26 @@
 .link:hover {
   text-decoration-thickness: 2px;
 }
+
+/* Secciones */
+.section {
+  padding-block: clamp(4rem, 9vw, 7rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.section__head {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.section__title {
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.section__lead {
+  max-width: 60ch;
+  color: var(--color-text-muted);
+}

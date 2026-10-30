@@ -1,16 +1,16 @@
-import { useReducedMotion } from "../hooks/useReducedMotion";
-import type { UI } from "../i18n/ui";
-import "./RequestFlow.css";
+import { useReducedMotion } from '../hooks/useReducedMotion'
+import type { UI } from '../i18n/ui'
+import './RequestFlow.css'
 
 /** Las piezas por las que pasa una petición en Bexceptional. */
-const NODES = ["React", "Django", "Neon", "Cloudinary"];
+const NODES = ['React', 'Django', 'Neon', 'Cloudinary']
 
 interface RequestFlowProps {
-  t: UI;
+  t: UI
 }
 
 export function RequestFlow({ t }: RequestFlowProps) {
-  const reducedMotion = useReducedMotion();
+  const reducedMotion = useReducedMotion()
 
   return (
     <figure className="flow">
@@ -25,5 +25,5 @@ export function RequestFlow({ t }: RequestFlowProps) {
       </ol>
       <figcaption className="flow__caption">{t.flowCaption}</figcaption>
     </figure>
-  );
+  )
 }

@@ -1,16 +1,16 @@
-import { profile } from "../data/profile";
-import type { Lang } from "../data/types";
-import type { UI } from "../i18n/ui";
-import "./Header.css";
+import { profile } from '../data/profile'
+import type { Lang } from '../data/types'
+import type { UI } from '../i18n/ui'
+import './Header.css'
 
 interface HeaderProps {
-  lang: Lang;
-  t: UI;
-  onToggleLang: () => void;
+  lang: Lang
+  t: UI
+  onToggleLang: () => void
 }
 
 export function Header({ lang, t, onToggleLang }: HeaderProps) {
-  const otherLang = lang === "es" ? "en" : "es";
+  const otherLang = lang === 'es' ? 'en' : 'es'
 
   return (
     <header className="header">
@@ -47,5 +47,5 @@ export function Header({ lang, t, onToggleLang }: HeaderProps) {
         </button>
       </div>
     </header>
-  );
+  )
 }
