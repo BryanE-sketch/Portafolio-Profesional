@@ -1,3 +1,7 @@
+import { profile } from './data/profile'
+
+
+
 const swatches = [
   { name: 'bg', value: 'var(--color-bg)' },
   { name: 'surface', value: 'var(--color-surface)' },
@@ -12,7 +16,7 @@ export default function App() {
     <main style={{ padding: 'var(--space-6) var(--gutter)', display: 'grid', gap: 'var(--space-3)' }}>
       <p style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Desarrollador Full Stack</p>
       <h1 style={{ fontSize: 'var(--text-hero)', fontWeight: 900, letterSpacing: '-0.035em' }}>
-        Brayan Echeverri Medina
+        {profile.name}
       </h1>
       <p style={{ color: 'var(--color-text-muted)', maxWidth: '58ch' }}>
         Pantalla temporal para comprobar tipografías y colores. La sustituiremos en la fase 4.
