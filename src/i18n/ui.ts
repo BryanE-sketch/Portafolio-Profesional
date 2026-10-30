@@ -1,0 +1,56 @@
+import type { Lang } from '../data/types'
+
+/** Textos fijos de la interfaz: navegación, botones y títulos de sección. */
+export const ui = {
+  es: {
+    nav: { projects: 'Proyectos', stack: 'Stack', about: 'Sobre mí', contact: 'Contacto' },
+    skip: 'Saltar al contenido',
+    langSwitch: 'English',
+    langSwitchLabel: 'Ver el sitio en inglés',
+    ctaProjects: 'Ver proyectos',
+    ctaGithub: 'GitHub',
+    ctaCv: 'Descargar CV',
+    flowCaption: 'Así viaja una petición por las aplicaciones que construyo',
+    flow: ['Interfaz', 'API', 'Base de datos', 'Archivos'],
+    projectsTitle: 'Proyectos',
+    projectsLead: 'Pocos, terminados y explicados. Cada uno con su código abierto en GitHub.',
+    code: 'Ver código',
+    demo: 'Ver demo',
+    draft: 'Borrador · oculto en producción',
+    stackTitle: 'Con qué trabajo',
+    aboutTitle: 'Sobre mí',
+    contactTitle: 'Hablemos',
+    contactLead: 'Si tu equipo busca un desarrollador junior con ganas de construir y aprender, escríbeme. Respondo en menos de 24 horas.',
+    contactEmail: 'Escribir un correo',
+    copy: 'Copiar correo',
+    copied: 'Correo copiado',
+    footer: 'Diseñado y programado por Brayan Echeverri con React y TypeScript.',
+  },
+  en: {
+    nav: { projects: 'Projects', stack: 'Stack', about: 'About', contact: 'Contact' },
+    skip: 'Skip to content',
+    langSwitch: 'Español',
+    langSwitchLabel: 'View the site in Spanish',
+    ctaProjects: 'See projects',
+    ctaGithub: 'GitHub',
+    ctaCv: 'Download CV',
+    flowCaption: 'How a request travels through the apps I build',
+    flow: ['Interface', 'API', 'Database', 'Files'],
+    projectsTitle: 'Projects',
+    projectsLead: 'Few, finished and explained. Each one with open source code on GitHub.',
+    code: 'View code',
+    demo: 'Live demo',
+    draft: 'Draft · hidden in production',
+    stackTitle: 'What I work with',
+    aboutTitle: 'About me',
+    contactTitle: 'Let’s talk',
+    contactLead: 'If your team is looking for a junior developer eager to build and learn, write to me. I reply within 24 hours.',
+    contactEmail: 'Send an email',
+    copy: 'Copy email',
+    copied: 'Email copied',
+    footer: 'Designed and built by Brayan Echeverri with React and TypeScript.',
+  },
+} satisfies Record<Lang, unknown>
+
+/** La forma de los textos, deducida de la versión en español. */
+export type UI = (typeof ui)['es']
