@@ -28,7 +28,7 @@ export const profile: Profile = {
 
 export const about: Localized[] = [
   {
-    es: 'Nací en Dosquebradas, Colombia, y hoy vivo en Marbella. Llegué a la programación como cambio de rumbo profesional, y eso me dejó una costumbre: antes de escribir código, entender quién va a usar lo que construyo y qué problema le resuelve.',
+    es: 'Nací en Dosquebradas, Colombia, y hoy vivo en Marbella, España. Llegué a la programación como cambio de rumbo profesional, y eso me dejó una costumbre: antes de escribir código, entender quién va a usar lo que construyo y qué problema le resuelve.',
     en: 'I was born in Dosquebradas, Colombia, and now live in Marbella. I came to programming as a career change, which left me with a habit: before writing code, understand who will use what I build and what problem it solves for them.',
   },
   {
