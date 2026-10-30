@@ -1,0 +1,133 @@
+.flow {
+  margin: clamp(3rem, 7vw, 5rem) 0 0;
+}
+
+.flow__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 3.5vw, 2.75rem);
+}
+
+/* Línea que une los nodos; queda por detrás de ellos */
+.flow__track::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  opacity: 0.6;
+}
+
+.flow__node {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.15rem;
+  padding: var(--space-2) 1.1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.flow__tech {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.flow__role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* El pulso viaja por detrás de los nodos y se ve en los huecos entre ellos */
+.flow__pulse {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 12.5%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 12px 3px rgb(15 252 190 / 0.55);
+  animation: travel-x 3.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes travel-x {
+  0% {
+    left: 12.5%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  80% {
+    left: 87.5%;
+    opacity: 1;
+  }
+  90%,
+  100% {
+    left: 87.5%;
+    opacity: 0;
+  }
+}
+
+.flow__caption {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* En móvil el recorrido pasa a ser vertical */
+@media (max-width: 720px) {
+  .flow__track {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-left: 1.75rem;
+  }
+
+  .flow__track::before {
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 0.45rem;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(
+      180deg,
+      var(--color-primary),
+      var(--color-accent)
+    );
+  }
+
+  .flow__pulse {
+    top: 1.5rem;
+    left: 0.45rem;
+    margin: -5px 0 0 -4.5px;
+    animation-name: travel-y;
+  }
+}
+
+@keyframes travel-y {
+  0% {
+    top: 1.5rem;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  80% {
+    top: calc(100% - 1.5rem);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    top: calc(100% - 1.5rem);
+    opacity: 0;
+  }
+}
