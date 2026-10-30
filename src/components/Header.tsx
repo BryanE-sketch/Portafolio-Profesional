@@ -36,13 +36,7 @@ export function Header({ lang, t, onToggleLang }: HeaderProps) {
           </ul>
         </nav>
 
-        <button
-          type="button"
-          className="header__lang"
-          onClick={onToggleLang}
-          aria-label={t.langSwitchLabel}
-          lang={otherLang}
-        >
+        <button type="button" className="header__lang" onClick={onToggleLang} lang={otherLang}>
           {t.langSwitch}
         </button>
       </div>
