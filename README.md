@@ -4,7 +4,7 @@
 
 Portafolio personal de **Brayan Echeverri Medina**, desarrollador full stack junior. Presento mis proyectos, el stack con el que trabajo y una forma directa de contactarme.
 
-**Demo:** _se publicará en Vercel_
+**Demo:** [brayanecheverri.vercel.app](https://brayanecheverri.vercel.app)
 
 ## Características
 
@@ -29,7 +29,7 @@ Portafolio personal de **Brayan Echeverri Medina**, desarrollador full stack jun
 
 | Performance | Accessibility | Best Practices | SEO |
 | :---------: | :-----------: | :------------: | :-: |
-|     97      |      100      |      100       | 100 |
+|     98      |      100      |      100       | 100 |
 
 ## Decisiones técnicas
 
