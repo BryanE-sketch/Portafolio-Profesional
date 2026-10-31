@@ -31,7 +31,7 @@ export function Projects({ lang, t }: ProjectsProps) {
             <h3 className="featured__title">{featured.title}</h3>
             <p className="featured__summary">{featured.summary[lang]}</p>
             <TechList items={featured.tech} />
-            <ProjectLinks project={featured} t={t} />
+            <ProjectLinks project={featured} lang={lang} t={t} />
           </div>
           <HighlightList items={featured.highlights.map((h) => h[lang])} />
         </article>
@@ -50,7 +50,7 @@ export function Projects({ lang, t }: ProjectsProps) {
                 <p className="project-row__summary">{project.summary[lang]}</p>
                 <HighlightList items={project.highlights.map((h) => h[lang])} />
                 <TechList items={project.tech} />
-                <ProjectLinks project={project} t={t} />
+                <ProjectLinks project={project} lang={lang} t={t} />
               </div>
             </li>
           ))}
@@ -80,21 +80,24 @@ function TechList({ items }: { items: string[] }) {
   )
 }
 
-function ProjectLinks({ project, t }: { project: Project; t: UI }) {
+function ProjectLinks({ project, lang, t }: { project: Project; lang: Lang; t: UI }) {
   if (!project.repo && !project.demo) return null
 
   return (
-    <div className="project-links">
-      {project.demo && (
-        <a className="link" href={project.demo} target="_blank" rel="noreferrer">
-          {t.demo}
-        </a>
-      )}
-      {project.repo && (
-        <a className="link" href={project.repo} target="_blank" rel="noreferrer">
-          {t.code}
-        </a>
-      )}
-    </div>
+    <>
+      <div className="project-links">
+        {project.demo && (
+          <a className="link" href={project.demo} target="_blank" rel="noreferrer">
+            {t.demo}
+          </a>
+        )}
+        {project.repo && (
+          <a className="link" href={project.repo} target="_blank" rel="noreferrer">
+            {t.code}
+          </a>
+        )}
+      </div>
+      {project.demo && project.demoNote && <p className="project-note">{project.demoNote[lang]}</p>}
+    </>
   )
 }

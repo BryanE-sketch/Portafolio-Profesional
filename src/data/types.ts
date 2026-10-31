@@ -30,6 +30,8 @@ export interface Project {
   tech: string[]
   repo?: string
   demo?: string
+  /** Aviso breve junto al enlace de la demo (p. ej. si tarda en arrancar). */
+  demoNote?: Localized
   status?: Localized
   /** El proyecto destacado ocupa el ancho completo. Solo uno. */
   featured?: boolean
