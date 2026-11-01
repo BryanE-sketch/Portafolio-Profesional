@@ -44,6 +44,10 @@ export const projects: Project[] = [
     ],
     repo: 'https://github.com/BryanE-sketch/Bexceptional---PFM',
     demo: 'https://bexceptional.onrender.com',
+    demoNote: {
+      es: 'Alojada en un plan gratuito: si lleva un rato sin visitas, puede tardar hasta un minuto en cargar.',
+      en: 'Hosted on a free plan: after a period without visits it may take up to a minute to load.',
+    },
   },
   {
     id: 'imperium-latin',

@@ -121,3 +121,9 @@
   background: #f2c94c;
   border-radius: 4px;
 }
+
+.project-note {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
