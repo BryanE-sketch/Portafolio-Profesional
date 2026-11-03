@@ -20,7 +20,7 @@ export const profile: Profile = {
   // Deja una cadena vacía ('') para ocultar el botón correspondiente.
   links: {
     github: 'https://github.com/BryanE-sketch',
-    linkedin: '', // Lo completaremos en la fase 9
+    linkedin: 'https://www.linkedin.com/in/brayan-echeverri-medina',
     email: 'echeverry28brayan@gmail.com',
     cv: '', // Ruta al PDF dentro de /public, p. ej. '/cv-brayan-echeverri.pdf'
   },
